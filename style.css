@@ -201,6 +201,12 @@ body {
     padding: 0px;
     overflow-y: auto;
     overflow: hidden;
+
+    /* ノッチを含む全画面表示 */
+    padding-top: env(safe-area-inset-top, 0);
+    padding-right: env(safe-area-inset-right, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-left: env(safe-area-inset-left, 0);
 }
 
 .fullscreen-content {
@@ -219,6 +225,14 @@ body {
     grid-template-rows: repeat(4, 1fr);
     width: 100vw;
     height: 100vh;
+    /* ノッチエリアも含めて完全に全画面表示 */
+    position: absolute;
+    top: calc(-1 * env(safe-area-inset-top, 0));
+    left: calc(-1 * env(safe-area-inset-left, 0));
+    right: calc(-1 * env(safe-area-inset-right, 0));
+    bottom: calc(-1 * env(safe-area-inset-bottom, 0));
+    width: calc(100vw + env(safe-area-inset-left, 0) + env(safe-area-inset-right, 0));
+    height: calc(100vh + env(safe-area-inset-top, 0) + env(safe-area-inset-bottom, 0));
 }
 
 .fullscreen-color-square {

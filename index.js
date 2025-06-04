@@ -55,31 +55,28 @@ function showFullscreen(type) {
 
     if (type === 'gradient') {
         content.innerHTML = `
-                    <div style="display: flex; flex-direction: column; height: 100vh; max-height: none;">
-                        <div class="gradient-strip cyan-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip magenta-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip yellow-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip red-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip green-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip blue-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip cyan-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip magenta-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip yellow-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip red-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip green-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip blue-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
+                    <div style="
+                        display: flex; 
+                        flex-direction: column; 
+                        height: calc(100vh + env(safe-area-inset-top, 0) + env(safe-area-inset-bottom, 0)); 
+                        width: calc(100vw + env(safe-area-inset-left, 0) + env(safe-area-inset-right, 0));
+                        position: absolute;
+                        top: calc(-1 * env(safe-area-inset-top, 0));
+                        left: calc(-1 * env(safe-area-inset-left, 0));
+                        max-height: none;
+                    ">
+                        <div class="gradient-strip cyan-to-white" style="flex: 1;"></div>
+                        <div class="gradient-strip magenta-to-white" style="flex: 1;"></div>
+                        <div class="gradient-strip yellow-to-white" style="flex: 1;"></div>
+                        <div class="gradient-strip red-to-white" style="flex: 1;"></div>
+                        <div class="gradient-strip green-to-white" style="flex: 1;"></div>
+                        <div class="gradient-strip blue-to-white" style="flex: 1;"></div>
+                        <div class="gradient-strip red-to-black" style="flex: 1;"></div>
+                        <div class="gradient-strip green-to-black" style="flex: 1;"></div>
+                        <div class="gradient-strip blue-to-black" style="flex: 1;"></div>
+                        <div class="gradient-strip cyan-to-black" style="flex: 1;"></div>
+                        <div class="gradient-strip magenta-to-black" style="flex: 1;"></div>
+                        <div class="gradient-strip yellow-to-black" style="flex: 1;"></div>
                     </div>
                 `;
     } else if (type === 'colors') {
