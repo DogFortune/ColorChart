@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorChart</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ColorChart</h1>
+        </div>
+
+        <!-- グラデーションチャートセクション -->
+        <div class="section">
+            <h2>Gradation Chart(256)</h2>
+            <button class="fullscreen-btn" onclick="showFullscreen('gradient')">FullScreen</button>
+            <div class="gradient-chart" id="gradientChart">
+                <div class="gradient-strip cyan-to-white">
+                </div>
+                <div class="gradient-strip magenta-to-white">
+                </div>
+                <div class="gradient-strip yellow-to-white">
+                </div>
+                <div class="gradient-strip red-to-white">
+                </div>
+                <div class="gradient-strip green-to-white">
+                </div>
+                <div class="gradient-strip blue-to-white">
+                </div>
+                <div class="gradient-strip red-to-black">
+                </div>
+                <div class="gradient-strip green-to-black">
+                </div>
+                <div class="gradient-strip blue-to-black">
+                </div>
+                <div class="gradient-strip cyan-to-black">
+                </div>
+                <div class="gradient-strip magenta-to-black">
+                </div>
+                <div class="gradient-strip yellow-to-black">
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- 24色カラーチャートセクション -->
+        <div class="section">
+            <h2>Color Chart</h2>
+            <button class="fullscreen-btn" onclick="showFullscreen('colors')">全画面表示</button>
+            <div class="color-chart" id="colorChart">
+                <!-- 24色の色見本がJavaScriptで生成される -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 全画面オーバーレイ -->
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <button class="close-btn" onclick="closeFullscreen()">×</button>
+        <div class="fullscreen-content" id="fullscreenContent">
+            <!-- 全画面コンテンツがここに表示される -->
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
