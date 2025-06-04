@@ -84,15 +84,13 @@ function showFullscreen(type) {
                 `;
     } else if (type === 'colors') {
         content.innerHTML = `
-                    <div class="color-chart" style="grid-template-columns: repeat(6, 1fr); gap: 15px; max-width: none; margin: 0; height: calc(100vh - 40px); grid-template-rows: repeat(4, 1fr);">
-                        ${colors.map((color, index) => `
-                            <div class="color-square" style="background-color: ${color.hex}; height: auto;">
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
+        <div class="fullscreen-color-chart">
+            ${colors.map((color, index) => `
+                <div class="fullscreen-color-square" style="background-color: ${color.hex};"></div>
+            `).join('')}
+        </div>
+    `;
     }
-
     overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }

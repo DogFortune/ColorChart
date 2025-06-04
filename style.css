@@ -200,6 +200,7 @@ body {
     display: none;
     padding: 0px;
     overflow-y: auto;
+    overflow: hidden;
 }
 
 .fullscreen-content {
@@ -209,6 +210,21 @@ body {
     max-width: 100%;
     margin: 0 auto;
     height: 100%;
+    width: 100%;
+}
+
+.fullscreen-color-chart {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 100vw;
+    height: 100vh;
+}
+
+.fullscreen-color-square {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .close-btn {
