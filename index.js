@@ -56,7 +56,7 @@ function showFullscreen(type) {
     if (type === 'gradient') {
         content.innerHTML = `
                     <div style="display: flex; flex-direction: column; height: 100vh; max-height: none;">
-                        <div class="cyan-to-white">
+                        <div class="gradient-strip cyan-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
                         </div>
                         <div class="gradient-strip magenta-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
                         </div>
@@ -68,17 +68,17 @@ function showFullscreen(type) {
                         </div>
                         <div class="gradient-strip blue-to-white" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
                         </div>
-                        <div class="gradient-strip red-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip green-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
-                        <div class="gradient-strip blue-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
-                        </div>
                         <div class="gradient-strip cyan-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
                         </div>
                         <div class="gradient-strip magenta-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
                         </div>
                         <div class="gradient-strip yellow-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
+                        </div>
+                        <div class="gradient-strip red-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
+                        </div>
+                        <div class="gradient-strip green-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
+                        </div>
+                        <div class="gradient-strip blue-to-black" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 30px;">
                         </div>
                     </div>
                 `;
